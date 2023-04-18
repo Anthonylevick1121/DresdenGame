@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerUI))]
 [RequireComponent(typeof(PlayerMovement))]
@@ -43,9 +44,23 @@ public class PlayerCore : MonoBehaviour
     private void SetDebug(bool debug)
     {
         this.debug = debug;
-        ui.debugText.gameObject.SetActive(debug);
-        if (debug && ui.debugText.text.Length == 0)
-            ui.debugText.text = "debug mode on.";
+        //Disabled temporarily for playtest, re-enable when debug features are implemented
+        //Used to display objective first
+        //ui.debugText.gameObject.SetActive(debug);
+        //if (debug && ui.debugText.text.Length == 0)
+        //    ui.debugText.text = "debug mode on.";
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            case 0:
+                ui.debugText.text = "Current task: Start laundry";
+                break;
+            case 1:
+                ui.debugText.text = "Current task: Set alarm in other bedroom";
+                break;
+            case 2:
+                ui.debugText.text = "Current task: Clean rec room cabinet";
+                break;
+        }
     }
     
     private void Update()

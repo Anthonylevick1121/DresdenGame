@@ -33,7 +33,7 @@ public class PlayerInteraction : MonoBehaviour
         if (!player.InputActions.enabled)
             return; // disable interaction updating while input is disabled
         
-        //player.ui.promptText.text = string.Empty;
+        player.ui.promptText.text = string.Empty;
         hoveredInteractable = null;
         Ray ray = new Ray(player.view.camera.transform.position, player.view.camera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance);
@@ -48,7 +48,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (interactable.GetPrompt(heldItem) != null)
             {
-                //Splayer.ui.promptText.text = interactable.GetPrompt(heldItem);
+                player.ui.promptText.text = interactable.GetPrompt(heldItem);
             }
             
         }

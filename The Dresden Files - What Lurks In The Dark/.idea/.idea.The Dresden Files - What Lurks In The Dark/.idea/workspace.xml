@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8aaf33db-ff7e-40af-ad02-647a261244b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The Dresden Files - What Lurks In The Dark/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The Dresden Files - What Lurks In The Dark/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Objectives/Scripts/GoalInteract/InteractTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Objectives/Scripts/GoalInteract/InteractTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Scripts/PlayerCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Scripts/PlayerCore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Scripts/PlayerInteraction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DreamOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DreamOne.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DreamThree.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DreamThree.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DreamTwo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DreamTwo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../build_temp\The Dresden Files - What Lurks In The Dark.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../build_temp/The Dresden Files - What Lurks In The Dark.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mario\Documents\build_temp" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,6 +102,7 @@
       <workItem from="1681751628176" duration="740000" />
       <workItem from="1681758507034" duration="2393000" />
       <workItem from="1681762255911" duration="1256000" />
+      <workItem from="1681784073756" duration="2364000" />
     </task>
     <servers />
   </component>

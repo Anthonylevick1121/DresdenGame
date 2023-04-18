@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class InteractTask : Interactable
 {
-    public override string GetPrompt(HoldableItem item) => "Start Laundry";
+    public override string GetPrompt(HoldableItem item) => "Interact";
 
     protected override bool Interact(PlayerCore player, HoldableItem heldItem)
     {

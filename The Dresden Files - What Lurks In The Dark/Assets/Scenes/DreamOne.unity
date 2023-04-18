@@ -55454,9 +55454,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1622105250107005342, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6058669650666072929, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: PlayerRoot
       objectReference: {fileID: 0}
     - target: {fileID: 8956760066173801342, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: m_RootOrder
