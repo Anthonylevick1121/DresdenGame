@@ -51,13 +51,13 @@ public class PlayerCore : MonoBehaviour
         //    ui.debugText.text = "debug mode on.";
         switch (SceneManager.GetActiveScene().buildIndex)
         {
-            case 0:
+            case 1:
                 ui.debugText.text = "Current task: Start laundry";
                 break;
-            case 1:
+            case 2:
                 ui.debugText.text = "Current task: Set alarm in other bedroom";
                 break;
-            case 2:
+            case 3:
                 ui.debugText.text = "Current task: Clean rec room cabinet";
                 break;
         }
