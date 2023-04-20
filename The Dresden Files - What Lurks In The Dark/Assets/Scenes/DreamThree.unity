@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0031405094, g: 0.0061705993, b: 0.014241768, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031405292, g: 0.0061706104, b: 0.014241753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38026,6 +38026,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 20565128, guid: a11e981b37ff86749a7a41b2999e3199, type: 3}
+      propertyPath: m_Size
+      value: 5.0000114
+      objectReference: {fileID: 0}
+    - target: {fileID: 20565128, guid: a11e981b37ff86749a7a41b2999e3199, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: 3.518982
+      objectReference: {fileID: 0}
+    - target: {fileID: 20565128, guid: a11e981b37ff86749a7a41b2999e3199, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: -3.1849976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11e981b37ff86749a7a41b2999e3199, type: 3}
 --- !u!4 &1509502146 stripped
@@ -53971,6 +53983,18 @@ PrefabInstance:
     - target: {fileID: 463258, guid: 6dc78eb22702ea84296ffaf6e8826c15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 20548814, guid: 6dc78eb22702ea84296ffaf6e8826c15, type: 3}
+      propertyPath: m_Size
+      value: 3.438521
+      objectReference: {fileID: 0}
+    - target: {fileID: 20548814, guid: 6dc78eb22702ea84296ffaf6e8826c15, type: 3}
+      propertyPath: m_LocalReferencePoint.y
+      value: 0.536001
+      objectReference: {fileID: 0}
+    - target: {fileID: 20548814, guid: 6dc78eb22702ea84296ffaf6e8826c15, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 1.3308599
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc78eb22702ea84296ffaf6e8826c15, type: 3}
