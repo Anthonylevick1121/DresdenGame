@@ -9,8 +9,10 @@ public abstract class Interactable : MonoBehaviour
     
     protected virtual void Start()
     {
-        gameObject.layer = LayerMask.NameToLayer("Interactable");
         audio = GetComponent<AudioSource>();
+        // I am constantly forgetting to set this (on children especially), so I'm just going to do so automatically.
+        foreach (Transform t in GetComponentsInChildren<Transform>())
+            t.gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
     
     public void BaseInteract(PlayerCore player, [CanBeNull] HoldableItem heldItem)

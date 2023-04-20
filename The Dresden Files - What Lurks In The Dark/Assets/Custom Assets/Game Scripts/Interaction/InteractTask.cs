@@ -14,7 +14,7 @@ public class InteractTask : CustomInteractable
         base.Start();
         tracker = ObjectiveTracking.instance;
         if (required) taskId = tracker.AddTask(taskSummary);
-        else tracker.AddOptional();
+        else taskId = tracker.AddOptional();
     }
     
     protected override bool Interact(PlayerCore player, HoldableItem heldItem)
@@ -23,7 +23,9 @@ public class InteractTask : CustomInteractable
         if (!res) return false;
         // tell the objective tracker that we're done
         if (required) tracker.CompleteTask(taskId);
-        else tracker.CompleteOptional();
+        else tracker.CompleteOptional(taskId);
+        // we don't need to keep this as a do-able task; destroy this *component* (not the object)
+        Destroy(this);
         return true;
     }
 }

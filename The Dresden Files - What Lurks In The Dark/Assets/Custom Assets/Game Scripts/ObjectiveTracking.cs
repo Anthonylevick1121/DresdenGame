@@ -39,8 +39,9 @@ public class ObjectiveTracking : MonoBehaviour
     private int optionalTasksDone; // how many have we completed?
     
     private readonly List<(bool, string)> requiredTasks = new ();
+    private readonly List<bool> optionalTasks = new ();
     //private List<Objective> optionalTasks = new ();
-    private int optionalTaskCount;
+    // private int optionalTaskCount;
     
     //private static readonly Objective finalObjective = new Objective { required = true, name = "Go to sleep."};
     private static readonly string finalTask = "Go to sleep.";
@@ -91,9 +92,9 @@ public class ObjectiveTracking : MonoBehaviour
             // add final objective
             tasks += "- " + finalTask + "\n";
         
-        if (optionalTaskCount > 0 && (allDone || optionalTasksDone > 0))
+        if (optionalTasks.Count > 0 && (allDone || optionalTasksDone > 0))
         {
-            bool optionalsDone = optionalTasksDone >= optionalTaskCount;
+            bool optionalsDone = optionalTasksDone >= optionalTasks.Count;
             tasks += "---\n<i>- " + StrikeIf(optionalsDone, "Optional: Explore more around the manor.");
         }
         
@@ -118,10 +119,20 @@ public class ObjectiveTracking : MonoBehaviour
         RefreshTaskListUI();
     }
     
-    // poor optional tasks are so neglected lol
-    public void AddOptional() => optionalTaskCount++;
-    public void CompleteOptional() => optionalTasksDone++;
-    
+    public int AddOptional()
+    {
+        int size = optionalTasks.Count;
+        optionalTasks.Add(false);
+        return size;
+    }
+
+    public void CompleteOptional(int taskId)
+    {
+        if (optionalTasks[taskId]) return;
+        optionalTasks[taskId] = true;
+        optionalTasksDone++;
+    }
+
     /*private void OnSceneChange(Scene scene)
     {
         if (scene.name == "MainMenu")
@@ -147,8 +158,7 @@ public class ObjectiveTracking : MonoBehaviour
         ScreenFade.instance.FadeScreen(CanvasLayer.LevelTransition, () =>
         {
             requiredTasks.Clear();
-            //optionalTasks.Clear();
-            optionalTaskCount = 0;
+            optionalTasks.Clear();
             requiredTasksDone = 0;
             optionalTasksDone = 0;
             initialized = false;
