@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float distance = 3f;
     [SerializeField] private LayerMask interactMask;
     
-    [SerializeField] private AudioClip pickupAudio, dropAudio;
+    //[SerializeField] private AudioClip pickupAudio, dropAudio;
     
     private Interactable hoveredInteractable;
     

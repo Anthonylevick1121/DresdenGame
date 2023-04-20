@@ -16,7 +16,7 @@ public class PlayerCore : MonoBehaviour
     
     public PlayerActionMap.PlayerActionsActions InputActions { get; private set; }
     
-    public bool debug = false;
+    public bool debug { get; private set; }
     
     private static readonly KeyCode[] debugToggleCodes =
     {
@@ -49,18 +49,18 @@ public class PlayerCore : MonoBehaviour
         //ui.debugText.gameObject.SetActive(debug);
         //if (debug && ui.debugText.text.Length == 0)
         //    ui.debugText.text = "debug mode on.";
-        switch (SceneManager.GetActiveScene().buildIndex)
+        /*switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 1:
-                ui.debugText.text = "Current task: Start laundry";
+                ui.taskList.text = "Current task: Start laundry";
                 break;
             case 2:
-                ui.debugText.text = "Current task: Set alarm in other bedroom";
+                ui.taskList.text = "Current task: Set alarm in other bedroom";
                 break;
             case 3:
-                ui.debugText.text = "Current task: Clean rec room cabinet";
+                ui.taskList.text = "Current task: Clean rec room cabinet";
                 break;
-        }
+        }*/
     }
     
     private void Update()

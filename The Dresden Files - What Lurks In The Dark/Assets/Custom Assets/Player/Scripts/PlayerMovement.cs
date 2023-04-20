@@ -20,10 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private float sprintMultiplier = 2f;
     [SerializeField] private float jumpHeight = 0.6f;
-    [SerializeField] private AudioSource footstepPlayer;
-    [SerializeField] private AudioClip walkAudio, runAudio;
-    private float startVolume;
-    private bool isMoving;
+    //[SerializeField] private AudioSource footstepPlayer;
+    //[SerializeField] private AudioClip walkAudio, runAudio;
+    // private float startVolume;
+    // private bool isMoving;
     
     // Start is called before the first frame update
     private void Start()
@@ -37,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
         player.InputActions.Crouch.performed += ctx => Crouch();
         player.InputActions.Sprint.performed += ctx => Sprint(ctx.ReadValueAsButton());
         
-        footstepPlayer.clip = walkAudio;
-        startVolume = footstepPlayer.volume;
-        isMoving = false;
+        //footstepPlayer.clip = walkAudio;
+        //startVolume = footstepPlayer.volume;
+        // isMoving = false;
     }
     
     private void FixedUpdate()
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         
         // handle audio; stop footsteps if in air or not moving, and start audio if on ground and moving
         delta.y = 0; // audio doesn't care about vertical movement
-        if (footstepPlayer.isPlaying && (!isGrounded || delta == Vector3.zero))
+        /*if (footstepPlayer.isPlaying && (!isGrounded || delta == Vector3.zero))
         {
             isMoving = false; // we aren't moving anymore, future movements should max the volume again
             // reduce volume linearly over the course of 0.25 seconds
@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             footstepPlayer.volume = startVolume;
             if(!footstepPlayer.isPlaying)
                 footstepPlayer.Play();
-        }
+        }*/
     }
     
     private void Crouch()
@@ -126,9 +126,9 @@ public class PlayerMovement : MonoBehaviour
     {
         sprinting = sprint;
         // moveSpeed = sprinting ? 8 : 5;
-        footstepPlayer.clip = sprint ? runAudio : walkAudio;
-        if(isMoving && !footstepPlayer.isPlaying)
-            footstepPlayer.Play();
+        // footstepPlayer.clip = sprint ? runAudio : walkAudio;
+        // if(isMoving && !footstepPlayer.isPlaying)
+        //     footstepPlayer.Play();
     }
     
     private void Jump()
