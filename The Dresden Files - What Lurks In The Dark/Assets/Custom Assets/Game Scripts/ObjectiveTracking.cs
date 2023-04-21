@@ -13,12 +13,8 @@ public class ObjectiveTracking : MonoBehaviour
     {
         if (instance != null)
         {
-            if (SceneManager.GetActiveScene().name != "MainMenu")
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Destroy(instance.gameObject);
+            Destroy(gameObject);
+            return;
         }
         
         instance = this;
@@ -46,6 +42,15 @@ public class ObjectiveTracking : MonoBehaviour
     //private static readonly Objective finalObjective = new Objective { required = true, name = "Go to sleep."};
     private static readonly string finalTask = "Go to sleep.";
     private UnityAction<Scene, Scene> sceneChangeAction;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(requiredTasksDone < requiredTasks.Count)
+                CompleteTask(requiredTasksDone);
+        }
+    }
     
     private void Start()
     {
@@ -62,9 +67,9 @@ public class ObjectiveTracking : MonoBehaviour
     private void InitializeLevel()
     {
         if (initialized) return;
-        initialized = true;
         
         player = FindAnyObjectByType<PlayerCore>();
+        initialized = player ? true : false;
     }
     
     private static string StrikeIf(bool strike, string s) => strike ? "<s>" + s + "</s>" : s;
@@ -77,7 +82,7 @@ public class ObjectiveTracking : MonoBehaviour
     private void RefreshTaskListUI()
     {
         InitializeLevel();
-        if (!player.ui.IsLoaded()) return;
+        if (!player  || !player.ui) return;
         
         // go through the task list
         string tasks = "To do list:\n";
