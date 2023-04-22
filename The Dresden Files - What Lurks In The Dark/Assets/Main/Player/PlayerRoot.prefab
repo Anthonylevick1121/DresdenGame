@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1387853864572325029}
   - component: {fileID: 2390407286933434720}
   - component: {fileID: 3514247368447702597}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: StatusMessageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 7213486700841580515}
   - component: {fileID: 7940460130718058382}
   - component: {fileID: 1954998717650712017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,9 +274,6 @@ MonoBehaviour:
   moveSpeed: 5
   sprintMultiplier: 2
   jumpHeight: 0.6
-  footstepPlayer: {fileID: 0}
-  walkAudio: {fileID: 0}
-  runAudio: {fileID: 0}
 --- !u!114 &7213486700841580515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,8 +306,6 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 64
-  pickupAudio: {fileID: 0}
-  dropAudio: {fileID: 0}
 --- !u!114 &1954998717650712017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +322,6 @@ MonoBehaviour:
   movement: {fileID: 0}
   view: {fileID: 0}
   interaction: {fileID: 0}
-  debug: 0
 --- !u!1 &2237022139704108963
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +334,7 @@ GameObject:
   - component: {fileID: 8260003518010592999}
   - component: {fileID: 8654605629529399631}
   - component: {fileID: 3603433116491538242}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HUD Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +436,7 @@ GameObject:
   - component: {fileID: 7698841024302990520}
   - component: {fileID: 4740346746723548155}
   - component: {fileID: 8798184358547654896}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InteractionPrompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4077338239563495269}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Hold Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +603,7 @@ GameObject:
   - component: {fileID: 6312403638623047495}
   - component: {fileID: 5228484791062729506}
   - component: {fileID: 4179967635410252507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -709,7 +703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8956760066173801342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +738,7 @@ GameObject:
   - component: {fileID: 1622105250107005342}
   - component: {fileID: 4220534103559300016}
   - component: {fileID: 7210426673687220654}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Task List Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
