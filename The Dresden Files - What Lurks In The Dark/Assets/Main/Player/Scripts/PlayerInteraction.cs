@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float distance = 3f;
     [SerializeField] private LayerMask interactMask;
     
+    public AudioSource interactSoundPlayer;
+    
     //[SerializeField] private AudioClip pickupAudio, dropAudio;
     
     private Interactable hoveredInteractable;
@@ -35,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
         
         player.ui.promptText.text = string.Empty;
         hoveredInteractable = null;
-        Ray ray = new Ray(player.view.camera.transform.position, player.view.camera.transform.forward);
+        Ray ray = new (player.view.camera.transform.position, player.view.camera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance);
         RaycastHit hitInfo;
         if (!Physics.Raycast(ray, out hitInfo, distance, interactMask)) return;

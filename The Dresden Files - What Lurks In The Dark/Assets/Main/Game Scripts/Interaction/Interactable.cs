@@ -3,13 +3,12 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    // [SerializeField] private string promptMessage;
-    [HideInInspector] protected new AudioSource audio;
+    //[HideInInspector] protected new AudioSource audio;
     [SerializeField] private AudioClip interactionSound;
     
     protected virtual void Start()
     {
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
         // I am constantly forgetting to set this (on children especially), so I'm just going to do so automatically.
         foreach (Transform t in GetComponentsInChildren<Transform>())
             t.gameObject.layer = LayerMask.NameToLayer("Interactable");
@@ -18,7 +17,7 @@ public abstract class Interactable : MonoBehaviour
     public void BaseInteract(PlayerCore player, [CanBeNull] HoldableItem heldItem)
     {
         if(Interact(player, heldItem) && interactionSound != null)
-            audio.PlayOneShot(interactionSound);
+            player.interaction.interactSoundPlayer.PlayOneShot(interactionSound);
     }
     
     protected abstract bool Interact( PlayerCore player, [CanBeNull] HoldableItem heldItem);

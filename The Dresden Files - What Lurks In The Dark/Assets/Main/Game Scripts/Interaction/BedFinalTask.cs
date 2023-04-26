@@ -1,4 +1,4 @@
-public class FinalTask : Interactable
+public class BedFinalTask : Interactable
 {
     public override string GetPrompt(HoldableItem heldItem)
     {

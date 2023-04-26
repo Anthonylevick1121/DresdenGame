@@ -17,6 +17,8 @@ public class InteractTask : CustomInteractable
         else taskId = tracker.AddOptional();
     }
     
+    protected virtual bool destroyScriptOnInteract() => true;
+    
     protected override bool Interact(PlayerCore player, HoldableItem heldItem)
     {
         bool res = base.Interact(player, heldItem); // do the main interaction trigger / effect
@@ -25,7 +27,7 @@ public class InteractTask : CustomInteractable
         if (required) tracker.CompleteTask(taskId);
         else tracker.CompleteOptional(taskId);
         // we don't need to keep this as a do-able task; destroy this *component* (not the object)
-        Destroy(this);
+        if(destroyScriptOnInteract()) Destroy(this);
         return true;
     }
 }

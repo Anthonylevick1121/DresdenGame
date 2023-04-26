@@ -2,12 +2,17 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public abstract class HoldableItem : Interactable
 {
     private Rigidbody rbody;
     
     [SerializeField]
     private AudioClip dropSound;
+    
+    // audio source is not required on a base interactable because that uses the player's interaction audio source.
+    // but this uses a separate one for dropping sound effects.
+    private AudioSource dropPlayer;
     
     // we only want to play the drop sound when it hits something immediately after being dropped
     // too many collision sounds is really messy and loud lmao
@@ -17,6 +22,7 @@ public abstract class HoldableItem : Interactable
     {
         base.Start();
         rbody = GetComponent<Rigidbody>();
+        dropPlayer = GetComponent<AudioSource>();
         playDropSound = false;
     }
     
@@ -36,6 +42,6 @@ public abstract class HoldableItem : Interactable
     {
         if (!playDropSound || collision.collider.isTrigger) return;
         playDropSound = false;
-        audio.PlayOneShot(dropSound);
+        dropPlayer.PlayOneShot(dropSound);
     }
 }

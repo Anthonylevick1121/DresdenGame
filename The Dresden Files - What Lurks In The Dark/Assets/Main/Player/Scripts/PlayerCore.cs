@@ -78,16 +78,19 @@ public class PlayerCore : MonoBehaviour
         else debugPresses = 0;
     }
     
-    public void ToggleGameInput(bool active)
+    public void ToggleGameInput(bool active, bool setCursor)
     {
         if(active) InputActions.Enable();
         else InputActions.Disable();
         
         ui.hudCanvas.enabled = active;
-        
-        // cursor is on when input is not
-        Cursor.visible = !active;
-        Cursor.lockState = active ? CursorLockMode.Locked : CursorLockMode.None;
+
+        if (setCursor)
+        {
+            // cursor is on when input is not
+            Cursor.visible = !active;
+            Cursor.lockState = active ? CursorLockMode.Locked : CursorLockMode.None;
+        }
     }
     
     private void OnEnable() => InputActions.Enable();

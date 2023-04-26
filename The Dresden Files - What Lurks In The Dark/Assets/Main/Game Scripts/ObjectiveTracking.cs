@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -26,6 +27,9 @@ public class ObjectiveTracking : MonoBehaviour
         public string name;
         public bool required;
     }*/
+
+    // event called when a task is completed; event provides bool to denote if this was a required task
+    public event Action<bool> OnTaskComplete;
     
     private PlayerCore player;
     private bool initialized = false; // have we set data for this level yet? 
@@ -122,6 +126,7 @@ public class ObjectiveTracking : MonoBehaviour
         requiredTasks[id] = (true, name);
         requiredTasksDone++;
         RefreshTaskListUI();
+        OnTaskComplete?.Invoke(true);
     }
     
     public int AddOptional()
@@ -136,6 +141,7 @@ public class ObjectiveTracking : MonoBehaviour
         if (optionalTasks[taskId]) return;
         optionalTasks[taskId] = true;
         optionalTasksDone++;
+        OnTaskComplete?.Invoke(false);
     }
 
     /*private void OnSceneChange(Scene scene)

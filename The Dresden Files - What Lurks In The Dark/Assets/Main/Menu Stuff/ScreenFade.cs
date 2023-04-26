@@ -150,5 +150,5 @@ public enum CanvasLayer
     // main menus will never be present with any of the rest of these, aside from the transition
     // exception is credits, with the subtitles, so we add that instead
     
-    Hud, LevelTransition, EndScreen, EndTransition, Subtitles, PauseScreen, CreditsScreen, MenuTransition
+    Hud, LevelTransition, Flashback, Subtitles, PauseScreen, CreditsScreen, MenuTransition
 }
