@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731725, g: 0.13414744, b: 0.12107873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -703,15 +703,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Tyler Grant: Programming, Lighting
 
-    Christopher Johns: Programming
+    Christopher Johns: Developer
 
     Anthony
-    Levick: Level Design
+    Levick: Level Design, Designer, Voice Actor
 
-    Katherine Stein: UI Designer
+    Katherine Stein: UI Designer,
+    Camera
 
-    Joey Stanton: Designer,
-    Voice
+    Joey Stanton: Designer, Voice Actor
 
 '
   m_isRightToLeft: 0
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.25
+  m_fontSize: 44.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

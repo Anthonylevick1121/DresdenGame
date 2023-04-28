@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("DreamOne");
     }
 
@@ -17,21 +18,13 @@ public class MainMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void GoToCredits()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Credits");
     }
-
-    //public void Resume()
-    //{
-
-    //}
-
-    //public void Pause()
-    //{
-
-    //}
 }
