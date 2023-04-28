@@ -11,9 +11,10 @@ public class PlayerUI : MonoBehaviour
     // is appealing enough to keep this for now.
     
     [SerializeField] public TextMeshProUGUI promptText;
-    //[SerializeField] public StatusTextListener status;
+    [SerializeField] public TextMeshProUGUI tutorialText;
     [SerializeField] public TextMeshProUGUI taskList;
     [SerializeField] public Canvas hudCanvas;
+    //[SerializeField] public StatusTextListener status;
     //[SerializeField] public PauseMenuLogic pauseMenu;
 
     // I have put the execution order of the player UI *after* everything else.
