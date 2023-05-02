@@ -4357,7 +4357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: d5652458f3b957d4d98fe0f917f6a7d7, type: 3}
   promptMessage: Clean the cabinet
   onInteract:
     m_PersistentCalls:
@@ -9222,6 +9222,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 450512, guid: 996c6dd75e116554ea1985a8c9e8c8d2, type: 3}
   m_PrefabInstance: {fileID: 342684583}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &342956004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1743938723583570, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+  m_PrefabInstance: {fileID: 1328943042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &342956008
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342956004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 1937bd4f570e09346bbeb60fe3f0d5ae, type: 3}
 --- !u!1001 &350034765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15555,7 +15574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420996978065507749, guid: 19edc3fab129e4e43aaa2ecc716469a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 523.8985
+      value: 523.985
       objectReference: {fileID: 0}
     - target: {fileID: 5420996978065507749, guid: 19edc3fab129e4e43aaa2ecc716469a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15563,7 +15582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420996978065507749, guid: 19edc3fab129e4e43aaa2ecc716469a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 523.33575
+      value: 523.498
       objectReference: {fileID: 0}
     - target: {fileID: 5420996978065507749, guid: 19edc3fab129e4e43aaa2ecc716469a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16588,6 +16607,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4624005263380358, guid: 48ec186542777474bb236dff1694340c, type: 3}
   m_PrefabInstance: {fileID: 620323672}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &620323674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1985338178271116, guid: 48ec186542777474bb236dff1694340c, type: 3}
+  m_PrefabInstance: {fileID: 620323672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &620323675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620323674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 8bdb7f2ec13e7264487dea71726bddba, type: 3}
+  promptMessage: Take medicine
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Take medicine
+  required: 0
+--- !u!64 &620323679
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620323674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 13c0f408a54463546a570585a55d00ab, type: 3}
 --- !u!1001 &629951827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34769,13 +34826,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase_VoluteKrater
       objectReference: {fileID: 0}
+    - target: {fileID: 1743938723583570, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4464237075027044, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4464237075027044, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.856995
+      value: 55.674
       objectReference: {fileID: 0}
     - target: {fileID: 4464237075027044, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34783,7 +34844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464237075027044, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.45288
+      value: 16.872
       objectReference: {fileID: 0}
     - target: {fileID: 4464237075027044, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34813,8 +34874,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23298315475871408, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23298315475871408, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+--- !u!1 &1328943043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1650199890616408, guid: 15eeb30f457f3da4e9514031c235f7ac, type: 3}
+  m_PrefabInstance: {fileID: 1328943042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1328943044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328943043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 79e2e39f7e0f4734989225e7d6c2e7f6, type: 3}
+  promptMessage: Inspect Urn
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Find the Urn
+  required: 0
 --- !u!1001 &1329684171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52654,6 +52747,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
   m_PrefabInstance: {fileID: 2004639243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2004639245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884156196641044, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
+  m_PrefabInstance: {fileID: 2004639243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2004639246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004639245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: d527d2b07c7764244aa2102dbe5754ce, type: 3}
+  promptMessage: Look at love notes
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Find love notes
+  required: 0
 --- !u!1001 &2004738495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53700,6 +53817,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
   m_PrefabInstance: {fileID: 2056568905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2056568907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
+  m_PrefabInstance: {fileID: 2056568905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056568908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056568907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 23422305f67805d46992152b674ab3bd, type: 3}
+  promptMessage: Check Voicemail
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Check Voicemail
+  required: 1
+--- !u!64 &2056568911
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056568907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
 --- !u!1001 &2058921315
 PrefabInstance:
   m_ObjectHideFlags: 0

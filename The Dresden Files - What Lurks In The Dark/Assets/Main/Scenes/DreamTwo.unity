@@ -14310,6 +14310,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4624005263380358, guid: 48ec186542777474bb236dff1694340c, type: 3}
   m_PrefabInstance: {fileID: 443088737}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &443088739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1985338178271116, guid: 48ec186542777474bb236dff1694340c, type: 3}
+  m_PrefabInstance: {fileID: 443088737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &443088740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443088739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 80168c38230dc544da5a44fdbec91eb4, type: 3}
+  promptMessage: Take medicine
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Take your medicine
+  required: 0
+--- !u!64 &443088741
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443088739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 13c0f408a54463546a570585a55d00ab, type: 3}
 --- !u!1001 &443940744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29618,6 +29656,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
   m_PrefabInstance: {fileID: 1048537922}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1048537924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
+  m_PrefabInstance: {fileID: 1048537922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1048537925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048537924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 6e426d2504b72464c886413f7c8c69d9, type: 3}
+  promptMessage: Check Voicemail
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Check Voicemail
+  required: 1
+--- !u!64 &1048537926
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048537924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
 --- !u!1 &1052407155
 GameObject:
   m_ObjectHideFlags: 0
@@ -29976,7 +30052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 46dff718dd8cc8c47bd8167609a82d79, type: 3}
   promptMessage: Turn off alarm
   onInteract:
     m_PersistentCalls:
@@ -38406,6 +38482,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4972761654227428, guid: b20b5222bdd4e455fbef4fbcce87d19c, type: 3}
   m_PrefabInstance: {fileID: 1433051027}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1433051029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1173737344391802, guid: b20b5222bdd4e455fbef4fbcce87d19c, type: 3}
+  m_PrefabInstance: {fileID: 1433051027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1433051030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433051029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: b8cac257cbfd18f4b8f9e9e53b9319f8, type: 3}
+  promptMessage: Look at Diagnosis Sheet
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Find your doctor's notes
+  required: 0
+--- !u!64 &1433051031
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433051029}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a8fbe669bb32640fa9ae0bfb1086fecb, type: 3}
 --- !u!1001 &1434262483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39028,6 +39142,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4583785174135108, guid: ef6b5ec84fe6f416099333b23f6f201d, type: 3}
   m_PrefabInstance: {fileID: 1451726476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1451726478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115619020883368, guid: ef6b5ec84fe6f416099333b23f6f201d, type: 3}
+  m_PrefabInstance: {fileID: 1451726476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451726479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451726478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSound: {fileID: 8300000, guid: 61265514716b4df4688d405000118266, type: 3}
+  promptMessage: Look at sticky note
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  taskSummary: Find the business card
+  required: 0
+--- !u!64 &1451726480
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451726478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 5a3764128a5414cad9e3f0d3d3c5014e, type: 3}
 --- !u!1001 &1453962159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49001,7 +49153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 0}
+  interactionSound: {fileID: 8300000, guid: 942be91c7e83d9e4887b6b59b18a4183, type: 3}
   promptMessage: Start up a fire
   onInteract:
     m_PersistentCalls:
