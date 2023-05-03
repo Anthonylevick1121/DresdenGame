@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public bool isPaused = false;
+    [SerializeField]
+    private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject HUDCanvas;
+    [SerializeField]
+    private GameObject flashbackCanvas;
+    [SerializeField]
+    private PlayerCore player;
+
     public void StartGame()
     {
         Time.timeScale = 1f;
@@ -26,5 +36,55 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Credits");
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        HUDCanvas.SetActive(true);
+        flashbackCanvas.SetActive(true);
+        isPaused = false;
+        player.InputActions.Look.Enable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        HUDCanvas.SetActive(true);
+        //player.ToggleGameInput(true, false);
+    }
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        HUDCanvas.SetActive(false);
+        flashbackCanvas.SetActive(false);
+        isPaused = true;
+        player.InputActions.Look.Disable();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        //player.ToggleGameInput(false, true);
+    }
+
+    private void Update()
+    {
+        // If the player presses the pause button
+        if (player.InputActions.Pause.IsPressed())
+        {
+            // Resume the game if paused
+            if (isPaused)
+            {
+                Resume();
+            }
+
+            // Pause the game if resumed
+            else
+            {
+                Pause();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "EndScene")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }

@@ -4,35 +4,46 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool isPaused = false;
-    public GameObject pauseMenu;
+    public static PauseMenu instance;
 
-    // Update is called once per frame
-    void Update()
+    public bool isPaused = false;
+    [SerializeField] 
+    private GameObject pauseMenu;
+    [SerializeField] 
+    private PlayerCore player;
+
+    private void Awake()
+    {
+        instance = this;    
+    }
+
+    private void Update()
     {
         // If the player presses the pause button
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             // Resume the game if paused
-            if (isPaused)
+            if (PauseMenu.instance.isPaused)
             {
-                Resume();
+                PauseMenu.instance.Resume();
             }
 
             // Pause the game if resumed
             else
             {
-                Pause();
+                PauseMenu.instance.Pause();
             }
         }
     }
-
 
     public void Resume()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        player.InputActions.Pause.Enable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Turn on player mouse
@@ -42,5 +53,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        player.InputActions.Pause.Disable();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
