@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private PlayerCore player;
 
+    private void Start()
+    {
+        player.InputActions.Pause.performed += ctx => SetPaused(!pauseMenu.activeSelf);
+    }
+
     public void StartGame()
     {
         Time.timeScale = 1f;
@@ -44,7 +49,7 @@ public class MainMenu : MonoBehaviour
         HUDCanvas.SetActive(true);
         flashbackCanvas.SetActive(true);
         isPaused = false;
-        player.InputActions.Look.Enable();
+        player.InputActions.Enable();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         HUDCanvas.SetActive(true);
@@ -56,30 +61,38 @@ public class MainMenu : MonoBehaviour
         HUDCanvas.SetActive(false);
         flashbackCanvas.SetActive(false);
         isPaused = true;
-        player.InputActions.Look.Disable();
+        player.InputActions.Disable();
+        player.InputActions.Pause.Enable();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
+    public void SetPaused(bool pause)
+    {
+        if (pause) Pause();
+        else Resume();
+    }
+    
     private void Update()
     {
         if (SceneManager.GetActiveScene().name != "EndScene")
         {
+            /*
             // If the player presses the pause button
-            if (player.InputActions.Pause.IsPressed())
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 // Resume the game if paused
                 if (isPaused)
                 {
                     Resume();
                 }
-
                 // Pause the game if resumed
                 else
                 {
                     Pause();
                 }
             }
+            */
         }
         else
         {
