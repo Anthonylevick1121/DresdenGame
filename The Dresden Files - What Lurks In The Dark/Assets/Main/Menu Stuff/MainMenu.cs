@@ -65,23 +65,25 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        // If the player presses the pause button
-        if (player.InputActions.Pause.IsPressed())
+        if (SceneManager.GetActiveScene().name != "EndScene")
         {
-            // Resume the game if paused
-            if (isPaused)
+            // If the player presses the pause button
+            if (player.InputActions.Pause.IsPressed())
             {
-                Resume();
-            }
+                // Resume the game if paused
+                if (isPaused)
+                {
+                    Resume();
+                }
 
-            // Pause the game if resumed
-            else
-            {
-                Pause();
+                // Pause the game if resumed
+                else
+                {
+                    Pause();
+                }
             }
         }
-
-        if (SceneManager.GetActiveScene().name == "EndScene")
+        else
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
