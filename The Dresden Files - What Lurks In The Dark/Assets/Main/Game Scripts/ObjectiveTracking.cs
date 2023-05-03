@@ -54,19 +54,29 @@ public class ObjectiveTracking : MonoBehaviour
             if(requiredTasksDone < requiredTasks.Count)
                 CompleteTask(requiredTasksDone);
         }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            if(optionalTasksDone < optionalTasks.Count)
+                CompleteOptional(optionalTasksDone);
+        }
     }
     
     private void Start()
     {
-        // we're gonna do most things on scene change
-        //sceneChangeAction = (oldScene, newScene) => OnSceneChange(newScene);
-        sceneChangeAction = (oldScene, newScene) => InitializeLevel();
-        
-        SceneManager.activeSceneChanged += sceneChangeAction;
-        //OnSceneChange(SceneManager.GetActiveScene());
+        SceneManager.activeSceneChanged += OnSceneChange;
         InitializeLevel();
     }
-    private void OnDestroy() => SceneManager.activeSceneChanged -= sceneChangeAction;
+    private void OnDestroy() => SceneManager.activeSceneChanged -= OnSceneChange;
+    
+    private void OnSceneChange(Scene oldScene, Scene newScene)
+    {
+        requiredTasks.Clear();
+        optionalTasks.Clear();
+        requiredTasksDone = 0;
+        optionalTasksDone = 0;
+        initialized = false;
+        InitializeLevel();
+    }
     
     private void InitializeLevel()
     {
@@ -74,6 +84,16 @@ public class ObjectiveTracking : MonoBehaviour
         
         player = FindAnyObjectByType<PlayerCore>();
         initialized = player ? true : false;
+        if (initialized)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
     
     private static string StrikeIf(bool strike, string s) => strike ? "<s>" + s + "</s>" : s;
@@ -86,7 +106,7 @@ public class ObjectiveTracking : MonoBehaviour
     private void RefreshTaskListUI()
     {
         InitializeLevel();
-        if (!player  || !player.ui) return;
+        if (!player || !player.ui) return;
         
         // go through the task list
         string tasks = "To do list:\n";
@@ -143,22 +163,6 @@ public class ObjectiveTracking : MonoBehaviour
         optionalTasksDone++;
         OnTaskComplete?.Invoke(false);
     }
-
-    /*private void OnSceneChange(Scene scene)
-    {
-        if (scene.name == "MainMenu")
-        {
-            //initialized = false;
-            //levelIdx = -1;
-            return;
-        }
-        
-        // this might be null; will be null for any non-level level
-        player = FindAnyObjectByType<PlayerCore>();
-        if (!player) return;
-        
-        //levelIdx++; // from a non-game level, this will increment to zero.
-    }*/
     
     // have we completed all but the final task for the day?
     public bool CanSleep() => requiredTasksDone >= requiredTasks.Count;
@@ -168,11 +172,6 @@ public class ObjectiveTracking : MonoBehaviour
     {
         ScreenFade.instance.FadeScreen(CanvasLayer.LevelTransition, () =>
         {
-            requiredTasks.Clear();
-            optionalTasks.Clear();
-            requiredTasksDone = 0;
-            optionalTasksDone = 0;
-            initialized = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         });
     }

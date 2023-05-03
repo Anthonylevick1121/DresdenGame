@@ -20,7 +20,7 @@ public class ScreenFade : MonoBehaviour
             if (inst) return inst;
             // statically load into inst
             GameObject obj = (GameObject) PrefabUtility.InstantiatePrefab(
-                AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Custom Assets/Menu Stuff/Screen Fade Overlay.prefab"));
+                AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Main/Menu Stuff/Screen Fade Overlay.prefab"));
             inst = obj.GetComponent<ScreenFade>();
             inst.Start();
             DontDestroyOnLoad(obj);
@@ -150,5 +150,5 @@ public enum CanvasLayer
     // main menus will never be present with any of the rest of these, aside from the transition
     // exception is credits, with the subtitles, so we add that instead
     
-    Hud, LevelTransition, Flashback, Subtitles, PauseScreen, CreditsScreen, MenuTransition
+    Hud, LevelTransition, Flashback, Subtitles, MenuScreen, MenuTransition
 }

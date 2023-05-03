@@ -78,14 +78,17 @@ public class PlayerCore : MonoBehaviour
         else debugPresses = 0;
     }
     
-    public void ToggleGameInput(bool active, bool setCursor)
+    /// <summary>
+    /// Toggle normal game input during special activities in the game.
+    /// </summary>
+    /// <param name="active">true enables input, false disables.</param>
+    /// <param name="affectCursor">if true, cursor will be enabled if disabling input, or hidden if enabling input.</param>
+    public void ToggleGameInput(bool active, bool affectCursor)
     {
         if(active) InputActions.Enable();
         else InputActions.Disable();
         
-        ui.hudCanvas.enabled = active;
-
-        if (setCursor)
+        if (affectCursor)
         {
             // cursor is on when input is not
             Cursor.visible = !active;

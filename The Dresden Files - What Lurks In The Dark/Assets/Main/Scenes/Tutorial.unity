@@ -10270,7 +10270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354451641}
-  m_RootOrder: 906
+  m_RootOrder: 882
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 270}
 --- !u!23 &332588692
 MeshRenderer:
@@ -11586,6 +11586,7 @@ Transform:
   - {fileID: 1435455207}
   - {fileID: 37624692}
   - {fileID: 544301587}
+  - {fileID: 2007539792}
   - {fileID: 596408279}
   - {fileID: 1052584818}
   - {fileID: 1906993408}
@@ -11796,7 +11797,7 @@ Transform:
   - {fileID: 1134755897}
   - {fileID: 1231889980}
   - {fileID: 267258573}
-  - {fileID: 2007539792}
+  - {fileID: 1107638168}
   - {fileID: 566441380}
   - {fileID: 1434609907}
   - {fileID: 862546685}
@@ -11811,7 +11812,7 @@ Transform:
   - {fileID: 482173522}
   - {fileID: 1809905332}
   - {fileID: 125570091}
-  - {fileID: 1107638168}
+  - {fileID: 332588691}
   - {fileID: 303560159}
   - {fileID: 1958308885}
   - {fileID: 1091670790}
@@ -11836,7 +11837,6 @@ Transform:
   - {fileID: 1394865371}
   - {fileID: 1775754790}
   - {fileID: 289141993}
-  - {fileID: 332588691}
   - {fileID: 1358174754}
   - {fileID: 2010046200}
   - {fileID: 1556017396}
@@ -20386,6 +20386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652c365cf9ae44b4caa37fea7b334fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2024458387}
 --- !u!4 &714677479
 Transform:
   m_ObjectHideFlags: 0
@@ -30039,7 +30040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354451641}
-  m_RootOrder: 881
+  m_RootOrder: 867
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 270}
 --- !u!23 &1107638169
 MeshRenderer:
@@ -51870,7 +51871,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354451641}
-  m_RootOrder: 866
+  m_RootOrder: 656
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2007539793
 MeshRenderer:
@@ -52286,6 +52287,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5036412160243240356, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 553008357, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 553008357, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: flashbackCanvas
       value: 
@@ -52340,6 +52349,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+--- !u!114 &2024458387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1954998717650712017, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+  m_PrefabInstance: {fileID: 2024458386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a1da040e5ce8e47baaef1047e0cc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2025406433
 PrefabInstance:
   m_ObjectHideFlags: 0

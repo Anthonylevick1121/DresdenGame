@@ -43,7 +43,7 @@ public class InspectInteractTask : InteractTask
         if (active || !base.Interact(player, heldItem)) return false;
         active = true;
         player.ToggleGameInput(false, false);
-        
+        player.ui.hudCanvas.enabled = false;
         // record current camera pos
         this.player = player;
         Transform cameraTransform = player.view.camera.transform;
@@ -106,6 +106,7 @@ public class InspectInteractTask : InteractTask
             //cameraTransform.position = originalCameraPosition;
             //cameraTransform.rotation = originalCameraRotation;
             player.ToggleGameInput(true, false);
+            player.ui.hudCanvas.enabled = true;
             player = null;
             active = false;
         }

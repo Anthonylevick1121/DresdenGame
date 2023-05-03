@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
+[RequireComponent(typeof(AudioSource))]
+// make sure to add this if you want the voice player to pause with the game! But sure, you don't *have* to.
+//[RequireComponent(typeof(PausableAudio))]
 public class VoicePlayer : MonoBehaviour
 {
     private static VoicePlayer inst;
@@ -37,6 +40,7 @@ public class VoicePlayer : MonoBehaviour
             {
                 inst.voicePlayer.Stop();
                 inst.subtitle.text = "";
+                inst.subtitleTimer = 0;
             }
             
             return;
@@ -53,12 +57,12 @@ public class VoicePlayer : MonoBehaviour
     private string captions;
     private bool paused;
     
+    // any audio that pauses in the pause menu should subscribe to this event.
+    // PausableAudio is a script you can attach to an AudioSource which handles this for you.
+    public event Action<bool> OnAudioPause;
+    
     private int cachedClip = -1;
     
-    // track currently-playing audio from non-main players.
-    private List<AudioSource> activeExternalPlayers = new ();
-    private float nextPlayerCheck;
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -86,8 +90,8 @@ public class VoicePlayer : MonoBehaviour
     public void SetPaused(bool pause)
     {
         paused = pause;
-        if(pause) voicePlayer.Pause();
-        else voicePlayer.UnPause();
+        // pause all interested audio players
+        OnAudioPause?.Invoke(pause);
     }
 
     private static float CalcDelay(float baseDelay, AudioClip clip, string captions)

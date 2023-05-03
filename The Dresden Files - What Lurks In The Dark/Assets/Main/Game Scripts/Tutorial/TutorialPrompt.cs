@@ -1,18 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TutorialPrompt : MonoBehaviour
 {
+    [SerializeField]
     private PlayerCore player;
     
-    void Start()
+    private void Start()
     {
-        player = FindAnyObjectByType<PlayerCore>();
         StartCoroutine(DisplayTutorial());
     }
-
-    IEnumerator DisplayTutorial()
+    
+    private IEnumerator DisplayTutorial()
     {
         player.ui.tutorialText.text = "\'W A S D\' to move and \'Shift\' to sprint";
         yield return new WaitForSeconds(5);
