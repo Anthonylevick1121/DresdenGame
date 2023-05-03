@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("DreamOne");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()
@@ -48,7 +48,6 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         HUDCanvas.SetActive(true);
-        //player.ToggleGameInput(true, false);
     }
 
     public void Pause()
@@ -60,7 +59,6 @@ public class MainMenu : MonoBehaviour
         player.InputActions.Look.Disable();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        //player.ToggleGameInput(false, true);
     }
 
     private void Update()

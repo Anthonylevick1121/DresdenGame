@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/MainMenu.unity
     guid: de6968f5cf507a84c980581612d47c7b
   - enabled: 1
+    path: Assets/Main/Scenes/Tutorial.unity
+    guid: f410f060fa678d541bf56bd059afc9d2
+  - enabled: 1
     path: Assets/Main/Scenes/DreamOne.unity
     guid: 69f806f9a6b518b4083f3be41c67db62
   - enabled: 1

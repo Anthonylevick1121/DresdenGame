@@ -621,8 +621,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1099279527}
-  - {fileID: 657880561}
   - {fileID: 1201946891}
+  - {fileID: 657880561}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -643,6 +643,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c52584cf38ed46baea178dc6bdd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenu: {fileID: 0}
+  HUDCanvas: {fileID: 0}
+  flashbackCanvas: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &570837136
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +963,7 @@ Transform:
   - {fileID: 1097144369}
   - {fileID: 1644080751}
   m_Father: {fileID: 419718282}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &743656864
 GameObject:
@@ -1662,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201946890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.350864, y: 16.94838, z: 92.72071}
+  m_LocalPosition: {x: 24.350864, y: 16.948383, z: 92.72071}
   m_LocalScale: {x: 1.201496, y: 1.201496, z: 1.201496}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1671,7 +1676,7 @@ Transform:
   - {fileID: 199602174}
   - {fileID: 743656865}
   m_Father: {fileID: 419718282}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321273832
 GameObject:
@@ -2135,7 +2140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "House: \n\nFont:\nhttps://www.1001fonts.com/veteran-typewriter-font.html\n\nImage:
+  m_text: "House: https://assetstore.unity.com/packages/3d/environments/flooded-grounds-48529#content\n\nFont:\nhttps://www.1001fonts.com/veteran-typewriter-font.html\n\nImage:
     \nhttps://image.freepik.com/free-photo/photo-texture-old-faded-paper_105034-424.jpg\n\nhttps://th.bing.com/th/id/R.7ee2c0e3e61bcfb09dbc9eea1beeb60b?rik=5Nu7yG7L55HH%2fw&riu=http%3a%2f%2fclipart-library.com%2fimg1%2f689341.png&ehk=IK16sRErm5Til1tANl1yI030G0gN09Tce1DNoNbYY8I%3d&risl=&pid=ImgRaw&r=0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55756398137e9cc448c3d1c6c5b1bdfd, type: 2}

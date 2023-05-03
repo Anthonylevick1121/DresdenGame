@@ -168,8 +168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514574344430968042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.04, y: -5.592, z: 0}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6437851408988845561}
@@ -803,6 +803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8956760066173801342}
+  - component: {fileID: 553008357}
   m_Layer: 7
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -828,6 +829,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553008357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058669650666072929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3c52584cf38ed46baea178dc6bdd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenu: {fileID: 2511418335811587159}
+  HUDCanvas: {fileID: 2237022139704108963}
+  flashbackCanvas: {fileID: 0}
+  player: {fileID: 1954998717650712017}
 --- !u!1 &6168440021121883301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,10 +1211,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3076561330352743004, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 553008357}
+    - target: {fileID: 3792836074550001757, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1954998717650712017}
+    - target: {fileID: 8456036892905997854, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 553008357}
+    - target: {fileID: 8456036892905997854, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
 --- !u!224 &2511418335811587155 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3076561329296752063, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
+  m_PrefabInstance: {fileID: 605872211976024556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2511418335811587159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3076561329296752059, guid: a74c4d84b1dda5d45bc2ba778166f32d, type: 3}
   m_PrefabInstance: {fileID: 605872211976024556}
   m_PrefabAsset: {fileID: 0}
