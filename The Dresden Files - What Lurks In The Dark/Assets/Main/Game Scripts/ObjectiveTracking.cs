@@ -50,7 +50,10 @@ public class ObjectiveTracking : MonoBehaviour
     
     private bool missedOptional = false;
     private bool lastScene = false;
+    // this accessor tells you if we are at the end of the last scene, in a completion state
     public bool CheckWin() => lastScene && !missedOptional && optionalTasksDone == optionalTasks.Count;
+    // this accessor tells you if all previous scenes were completed fully (used by end screen)
+    public bool CheckWon() => !missedOptional;
     
     private void Update()
     {

@@ -10,7 +10,7 @@ public class EndScreen : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        bool win = ObjectiveTracking.instance.CheckWin();
+        bool win = ObjectiveTracking.instance.CheckWon();
         winScreen.SetActive(win);
         loseScreen.SetActive(!win);
     }
