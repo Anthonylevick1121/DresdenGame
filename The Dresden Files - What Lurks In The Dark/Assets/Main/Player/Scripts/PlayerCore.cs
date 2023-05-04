@@ -78,6 +78,11 @@ public class PlayerCore : MonoBehaviour
             }
         }
         else debugPresses = 0;
+        
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.L))
+            gameObject.AddComponent<Light>();
+        #endif
     }
     
     /// <summary>

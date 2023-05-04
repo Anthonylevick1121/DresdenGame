@@ -20,7 +20,8 @@ public class PauseMenu : MonoBehaviour
     
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        ScreenFade.instance.LoadSceneWithFade("MainMenu", false);
+        ScreenFade.instance.ManualFadeIn(); // fade fix just in case
     }
     
     public void SetPaused(bool pause)

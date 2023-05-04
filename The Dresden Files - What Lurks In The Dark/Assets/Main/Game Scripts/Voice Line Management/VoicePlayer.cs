@@ -54,7 +54,7 @@ public class VoicePlayer : MonoBehaviour
     [SerializeField] private AudioSource voicePlayer;
     [SerializeField] private TextMeshProUGUI subtitle;
     private float subtitleTimer;
-    private string captions;
+    // private string captions;
     private bool paused;
     
     // any audio that pauses in the pause menu should subscribe to this event.
@@ -75,11 +75,11 @@ public class VoicePlayer : MonoBehaviour
     private void Update()
     {
         if (paused || subtitleTimer <= 0) return;
-        if (captions != null)
+        /*if (captions != null)
         {
             subtitle.text = captions;
             captions = null;
-        }
+        }*/
         
         subtitleTimer -= Time.deltaTime;
         if (subtitleTimer <= 0) subtitle.text = "";
@@ -124,8 +124,8 @@ public class VoicePlayer : MonoBehaviour
             player.PlayDelayed(delay); // delay to account for fade time, etc
         }
         
-        captions = line.subtitle;
-        subtitleTimer = CalcDelay(delay, player.clip, captions);
+        subtitleTimer = CalcDelay(delay, player.clip, line.subtitle);
+        subtitle.text = line.subtitle;
         return subtitleTimer;
     }
 }

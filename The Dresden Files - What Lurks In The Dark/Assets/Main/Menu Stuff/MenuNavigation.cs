@@ -5,7 +5,7 @@ public class MenuNavigation : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        ScreenFade.instance.LoadSceneWithFade("Tutorial", true);
     }
     
     public void QuitGame()

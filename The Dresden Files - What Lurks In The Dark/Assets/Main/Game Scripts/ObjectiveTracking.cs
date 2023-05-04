@@ -202,6 +202,7 @@ public class ObjectiveTracking : MonoBehaviour
     
     private IEnumerator FadeToEnd()
     {
+        player.ToggleGameInput(false, false);
         float time = VoicePlayer.instance.PlayVoiceLine(CheckWin() ? VoiceLineId.EndingEscape : VoiceLineId.EndingSleep);
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("EndScene");
