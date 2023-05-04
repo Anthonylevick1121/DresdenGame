@@ -16,6 +16,7 @@ public class PausableAudio : MonoBehaviour
     
     private void OnPause(bool paused)
     {
+        if (!audioSource) return;
         if(paused) audioSource.Pause();
         else audioSource.UnPause();
     }

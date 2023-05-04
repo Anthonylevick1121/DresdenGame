@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -45,19 +47,24 @@ public class ObjectiveTracking : MonoBehaviour
     
     //private static readonly Objective finalObjective = new Objective { required = true, name = "Go to sleep."};
     private static readonly string finalTask = "Go to sleep.";
-    private UnityAction<Scene, Scene> sceneChangeAction;
-
+    
+    private bool missedOptional = false;
+    private bool lastScene = false;
+    public bool CheckWin() => lastScene && !missedOptional && optionalTasksDone == optionalTasks.Count;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if(requiredTasksDone < requiredTasks.Count)
-                CompleteTask(requiredTasksDone);
+            int id = requiredTasks.FindIndex(task => !task.Item1);
+            if(id >= 0)
+                CompleteTask(id);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            if(optionalTasksDone < optionalTasks.Count)
-                CompleteOptional(optionalTasksDone);
+            int id = optionalTasks.FindIndex(taskDone => !taskDone);
+            if(id >= 0)
+                CompleteOptional(id);
         }
     }
     
@@ -75,6 +82,13 @@ public class ObjectiveTracking : MonoBehaviour
         requiredTasksDone = 0;
         optionalTasksDone = 0;
         initialized = false;
+        
+        // reset global optional tracking
+        if(newScene.name == "Tutorial")
+            missedOptional = false;
+        
+        lastScene = newScene.name == "DreamThree";
+        
         InitializeLevel();
     }
     
@@ -86,11 +100,13 @@ public class ObjectiveTracking : MonoBehaviour
         initialized = player ? true : false;
         if (initialized)
         {
+            // game
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
+            // menu
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
@@ -161,6 +177,7 @@ public class ObjectiveTracking : MonoBehaviour
         if (optionalTasks[taskId]) return;
         optionalTasks[taskId] = true;
         optionalTasksDone++;
+        RefreshTaskListUI();
         OnTaskComplete?.Invoke(false);
     }
     
@@ -172,7 +189,19 @@ public class ObjectiveTracking : MonoBehaviour
     {
         ScreenFade.instance.FadeScreen(CanvasLayer.LevelTransition, () =>
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        });
+            if (optionalTasksDone < optionalTasks.Count)
+                missedOptional = true;
+            
+            if (lastScene) StartCoroutine(FadeToEnd());
+            else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }, !lastScene);
+    }
+    
+    private IEnumerator FadeToEnd()
+    {
+        float time = VoicePlayer.instance.PlayVoiceLine(CheckWin() ? VoiceLineId.EndingEscape : VoiceLineId.EndingSleep);
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("EndScene");
+        ScreenFade.instance.ManualFadeIn();
     }
 }

@@ -28,10 +28,12 @@ public enum VoiceLineId
 {
     None, 
     
-    Voicemail1, Voicemail2, Voicemail3, DresdenInterrupt,
+    Voicemail1, Voicemail2, Voicemail3,
     
     TutTask1, TutTask2, TutTaskFinal,
     
-    ObjNecklace, ObjUrn, ObjLoveNotes, ObjPictures, ObjBuisCard, ObjDiagnosis,
-    ObjPills1, ObjPills2, ObjPills3
+    ObjNecklace, ObjUrn, ObjLoveNotes, ObjBuisCard, ObjDiagnosis, ObjPortrait, ObjPills2, ObjPills3,
+    ObjFireplace, ObjAlarm, ObjBreakfast, ObjDiningCabinet, ObjDiningClock, ObjLaundry,
+    
+    EndingSleep, EndingEscape
 }

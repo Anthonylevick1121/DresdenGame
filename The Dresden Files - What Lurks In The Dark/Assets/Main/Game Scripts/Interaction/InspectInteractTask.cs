@@ -7,10 +7,6 @@ using UnityEngine;
 /// </summary>
 public class InspectInteractTask : InteractTask
 {
-    // any effect that should go away once interacted with should be parented under this object.
-    [SerializeField] private GameObject notInteractedEffect;
-    [SerializeField] private VoiceLineId voiceLineOnInteract;
-    
     // where should the player camera be positioned/rotated to when inspecting this object?
     [SerializeField] private Transform cameraViewLocation;
     private bool active; // are we inspecting this object?
@@ -20,7 +16,7 @@ public class InspectInteractTask : InteractTask
     private Quaternion originalCameraRotation;
     
     // how long should it take to animate from the starting position to in front of the player?
-    [SerializeField] private float inspectAnimationTime;
+    [SerializeField] private float inspectAnimationTime = 1.25f;
     private Vector3 animVelocityCache; // for SmoothDamp of animation
     private float curAnimTime; // how far into the animation are we?
     private bool starting; // are we looking at the object, or going away from the object?
@@ -57,9 +53,6 @@ public class InspectInteractTask : InteractTask
         animStartRot = originalCameraRotation;
         animEndPos = cameraViewLocation.position;
         animEndRot = cameraViewLocation.rotation;
-        // toggle effects
-        if(notInteractedEffect)
-            notInteractedEffect.SetActive(false);
         return true;
     }
     
@@ -90,16 +83,11 @@ public class InspectInteractTask : InteractTask
         cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position, animEndPos,
             ref animVelocityCache, inspectAnimationTime, float.MaxValue, Time.deltaTime);
         cameraTransform.rotation = Quaternion.Slerp(animStartRot, animEndRot, curAnimTime / inspectAnimationTime);
-
+        
         if (curAnimTime < inspectAnimationTime) return;
         
         // end the animation
-        if(starting)
-        { // end entrance anim
-            if(voiceLineOnInteract != VoiceLineId.None)
-                VoicePlayer.instance.PlayVoiceLine(voiceLineOnInteract);
-        }
-        else
+        if (!starting)
         { // end exit anim, returning control to the player
             // the below shouldn't be needed, but uncomment if the camera starts to drift from its default position
             // after a number of interacts.

@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1063456765}
   m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1201,6 +1201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52494256}
   - component: {fileID: 52494257}
+  - component: {fileID: 52494258}
   m_Layer: 6
   m_Name: Breakfast
   m_TagString: Untagged
@@ -1242,9 +1243,37 @@ MonoBehaviour:
   promptMessage: Have this for breakfast
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 52494258}
+        m_TargetAssemblyTypeName: TutorialFlashbackAction, Assembly-CSharp
+        m_MethodName: RunFlashback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   taskSummary: Eat some breakfast.
   required: 1
+  voiceLineOnInteract: 0
+  notInteractedEffect: {fileID: 0}
+--- !u!114 &52494258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52494255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77d8af527dd52a48b6fa1184afb37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5530016477779733205}
+  flashback: {fileID: 5530016477779733204}
 --- !u!1001 &53785377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5898,7 +5927,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11378,6 +11407,7 @@ Transform:
   - {fileID: 295651646}
   - {fileID: 1156349761}
   - {fileID: 121696936}
+  - {fileID: 2007539792}
   - {fileID: 1670661121}
   - {fileID: 2078656617}
   - {fileID: 658283134}
@@ -11586,7 +11616,6 @@ Transform:
   - {fileID: 1435455207}
   - {fileID: 37624692}
   - {fileID: 544301587}
-  - {fileID: 2007539792}
   - {fileID: 596408279}
   - {fileID: 1052584818}
   - {fileID: 1906993408}
@@ -15641,8 +15670,8 @@ MonoBehaviour:
       m_Calls: []
   taskSummary: 
   required: 0
-  notInteractedEffect: {fileID: 318142586}
   voiceLineOnInteract: 0
+  notInteractedEffect: {fileID: 318142586}
   cameraViewLocation: {fileID: 1493588421}
   inspectAnimationTime: 1.25
 --- !u!65 &535197254
@@ -15723,7 +15752,7 @@ Transform:
   - {fileID: 1493588421}
   - {fileID: 318142588}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &535951725 stripped
 Transform:
@@ -20400,7 +20429,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &714756452
 PrefabInstance:
@@ -25581,7 +25610,7 @@ Transform:
   - {fileID: 1475714425}
   - {fileID: 52494256}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &917170336
 PrefabInstance:
@@ -34702,7 +34731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37268,9 +37297,37 @@ MonoBehaviour:
   promptMessage: Do laundry
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1395449265}
+        m_TargetAssemblyTypeName: TutorialFlashbackAction, Assembly-CSharp
+        m_MethodName: RunFlashback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   taskSummary: Do your laundry.
   required: 1
+  voiceLineOnInteract: 0
+  notInteractedEffect: {fileID: 0}
+--- !u!114 &1395449265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395449262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77d8af527dd52a48b6fa1184afb37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5530016477779733205}
+  flashback: {fileID: 5530016477779733204}
 --- !u!4 &1396198824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 461530, guid: cd395b40de0957d4d9c85b8e623a07d1, type: 3}
@@ -39691,9 +39748,37 @@ MonoBehaviour:
   promptMessage: Reset Clock
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1475714427}
+        m_TargetAssemblyTypeName: TutorialFlashbackAction, Assembly-CSharp
+        m_MethodName: RunFlashback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   taskSummary: Reset the Clock in the downstairs dining room.
   required: 1
+  voiceLineOnInteract: 0
+  notInteractedEffect: {fileID: 0}
+--- !u!114 &1475714427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475714424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77d8af527dd52a48b6fa1184afb37a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5530016477779733205}
+  flashback: {fileID: 5530016477779733204}
 --- !u!1001 &1476786457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51871,7 +51956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354451641}
-  m_RootOrder: 656
+  m_RootOrder: 448
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2007539793
 MeshRenderer:
@@ -52299,6 +52384,10 @@ PrefabInstance:
       propertyPath: flashbackCanvas
       value: 
       objectReference: {fileID: 665396809}
+    - target: {fileID: 5116839566714610059, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137
+      objectReference: {fileID: 0}
     - target: {fileID: 6058669650666072929, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: m_Name
       value: PlayerRoot
@@ -54682,6 +54771,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1511990444967020641, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+      propertyPath: voiceLine
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511990445962051817, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+      propertyPath: voiceLine
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511990446611771854, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+      propertyPath: voiceLine
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5530016477370322074, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
       propertyPath: m_Name
       value: Flashback Canvas
@@ -54696,7 +54797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
       propertyPath: m_AnchorMax.x
@@ -54772,3 +54873,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+--- !u!114 &5530016477779733204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1511990444967020641, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+  m_PrefabInstance: {fileID: 5530016477779733203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baa40128883ec44ebd9af32824eacfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5530016477779733205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5530016477370322077, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
+  m_PrefabInstance: {fileID: 5530016477779733203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665396809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e48bb79ddbb55542a1c1bd1ffdae496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,6 +4,11 @@ public class InteractTask : CustomInteractable
 {
     [SerializeField] private string taskSummary;
     [SerializeField] private bool required;
+    
+    // any effect that should go away once interacted with should be parented under this object.
+    [SerializeField] private VoiceLineId voiceLineOnInteract;
+    [SerializeField] private GameObject notInteractedEffect;
+    
     private int taskId;
     private ObjectiveTracking tracker;
     
@@ -26,6 +31,11 @@ public class InteractTask : CustomInteractable
         // tell the objective tracker that we're done
         if (required) tracker.CompleteTask(taskId);
         else tracker.CompleteOptional(taskId);
+        // toggle effects
+        if(notInteractedEffect)
+            notInteractedEffect.SetActive(false);
+        if(voiceLineOnInteract != VoiceLineId.None)
+            VoicePlayer.instance.PlayVoiceLine(voiceLineOnInteract);
         // we don't need to keep this as a do-able task; destroy this *component* (not the object)
         if(destroyScriptOnInteract()) Destroy(this);
         return true;

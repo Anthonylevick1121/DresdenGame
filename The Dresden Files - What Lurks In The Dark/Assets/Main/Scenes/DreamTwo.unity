@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: b4f152e0498484391a9f0d5a1facf03b, type: 2}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015344239, g: 0.009200266, b: 0.014313903, a: 1}
+  m_IndirectSpecularColor: {r: 0.015430791, g: 0.009246423, b: 0.014405392, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3084,7 +3084,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14327,13 +14327,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 80168c38230dc544da5a44fdbec91eb4, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Take medicine
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Take your medicine
   required: 0
+  voiceLineOnInteract: 13
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &443088741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28298,108 +28300,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 461530, guid: cd395b40de0957d4d9c85b8e623a07d1, type: 3}
   m_PrefabInstance: {fileID: 1003531821}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1005413655
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1339796187}
-    m_Modifications:
-    - target: {fileID: 5530016477370322074, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Name
-      value: Flashback Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
---- !u!224 &1005413656 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-  m_PrefabInstance: {fileID: 1005413655}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1006828727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29775,13 +29675,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 6e426d2504b72464c886413f7c8c69d9, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Check Voicemail
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Check Voicemail
   required: 1
+  voiceLineOnInteract: 2
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &1048537926
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -30154,13 +30056,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 46dff718dd8cc8c47bd8167609a82d79, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Turn off alarm
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Turn off the alarm in the other bedroom.
   required: 1
+  voiceLineOnInteract: 16
+  notInteractedEffect: {fileID: 0}
 --- !u!1001 &1057692865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36056,38 +35960,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 475722, guid: 33d2396704f502c40bd674b135e08461, type: 3}
   m_PrefabInstance: {fileID: 1338860118}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1339796186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1339796187}
-  m_Layer: 0
-  m_Name: DoNotDelete
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1339796187
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339796186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 291, z: 254.83499}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1005413656}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1346062303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38633,13 +38505,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: b8cac257cbfd18f4b8f9e9e53b9319f8, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Look at Diagnosis Sheet
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Find your doctor's notes
   required: 0
+  voiceLineOnInteract: 11
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &1433051031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39293,13 +39167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 61265514716b4df4688d405000118266, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Look at sticky note
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Find the business card
   required: 0
+  voiceLineOnInteract: 10
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &1451726480
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40139,7 +40015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8512779531928045423, guid: 141c36ce9829c674aa52afd8218f5715, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8512779531928045423, guid: 141c36ce9829c674aa52afd8218f5715, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42736,7 +42612,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1163211576910360016, guid: c28b03c13badfc045b609d73afdc42d6, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1163211576910360016, guid: c28b03c13badfc045b609d73afdc42d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49287,7 +49163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 942be91c7e83d9e4887b6b59b18a4183, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Start up a fire
   onInteract:
     m_PersistentCalls:
@@ -49306,6 +49182,8 @@ MonoBehaviour:
         m_CallState: 2
   taskSummary: Start a Fire in the Fireplace.
   required: 1
+  voiceLineOnInteract: 15
+  notInteractedEffect: {fileID: 0}
 --- !u!1001 &1653554087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49897,7 +49775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51263,7 +51141,7 @@ Transform:
   - {fileID: 1057666649}
   - {fileID: 1653332812}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1732169776
 PrefabInstance:
@@ -54797,7 +54675,7 @@ PrefabInstance:
     - target: {fileID: 553008357, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: flashbackCanvas
       value: 
-      objectReference: {fileID: 1339796186}
+      objectReference: {fileID: 0}
     - target: {fileID: 6058669650666072929, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: m_Name
       value: Player

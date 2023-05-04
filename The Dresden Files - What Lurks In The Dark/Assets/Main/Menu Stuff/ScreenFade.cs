@@ -72,12 +72,15 @@ public class ScreenFade : MonoBehaviour
         // funni loading text ... animation
     }
     
-    public void FadeScreen(CanvasLayer fadeLayer, Action onFade, Color initialFadeColor)
+    /*public void FadeScreen(CanvasLayer fadeLayer, Action onFade, Color initialFadeColor)
     {
         backCover.color = initialFadeColor;
         FadeScreen(fadeLayer, onFade, true);
+    }*/
+    public void FadeScreen(CanvasLayer fadeLayer, Action onFade, bool fadeInAfter = true)
+    {
+        FadeScreen(fadeLayer, onFade, false, false, fadeInAfter);
     }
-    public void FadeScreen(CanvasLayer fadeLayer, Action onFade) => FadeScreen(fadeLayer, onFade, false);
     private void FadeScreen(CanvasLayer fadeLayer, Action onFade,
         bool fadeBack, bool showLoadingText = false, bool fadeInAfter = true)
     {
@@ -95,7 +98,12 @@ public class ScreenFade : MonoBehaviour
         onFadeAction?.Invoke();
         animateLoading = loadingText.gameObject.activeInHierarchy;
         if(fadeInAfter)
-            animator.SetBool(doFadeParam, false);
+            ManualFadeIn();
+    }
+    
+    public void ManualFadeIn()
+    {
+        animator.SetBool(doFadeParam, false);
     }
     
     // screen is visible again

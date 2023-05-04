@@ -8,31 +8,40 @@ public class TutorialFlashbackController : MonoBehaviour
     // we want to fade in a background before the main thing
     [SerializeField] private Animator backgroundAnimator;
     // the flashbacks, which correspond to tutorial tasks.
-    [SerializeField] private FlashbackDelegate[] flashbacks;
+    // [SerializeField] private FlashbackDelegate[] flashbacks;
+    
+    private FlashbackDelegate currentFlashback;
     
     private PlayerCore player;
-    private int tasksCompleted;
+    // private int tasksCompleted;
     
     private static readonly int fadeParam = Animator.StringToHash("Fade In");
     
     private void Start()
     {
-        tasksCompleted = 0;
+        // tasksCompleted = 0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCore>();
         flashbackCanvas.sortingOrder = (int) CanvasLayer.Flashback;
     }
     
     private void OnTaskComplete(bool required)
     {
-        if (!required || tasksCompleted >= flashbacks.Length) return;
+        // if (!required || tasksCompleted >= flashbacks.Length) return;
         // run flashback
+        player.ToggleGameInput(false, false);
+        backgroundAnimator.SetBool(fadeParam, true);
+    }
+    
+    public void RunFlashback(FlashbackDelegate flashback)
+    {
+        currentFlashback = flashback;
         player.ToggleGameInput(false, false);
         backgroundAnimator.SetBool(fadeParam, true);
     }
 
     public void OnFadeFull()
     {
-        flashbacks[tasksCompleted].StartFlashback();
+        if(currentFlashback) currentFlashback.StartFlashback();
     }
     
     public void OnChildFadeEnd()
@@ -41,10 +50,11 @@ public class TutorialFlashbackController : MonoBehaviour
     }
     public void OnFadeEnd()
     {
-        tasksCompleted++;
+        // tasksCompleted++;
         player.ToggleGameInput(true, false);
+        currentFlashback = null;
     }
     
-    private void OnEnable() => ObjectiveTracking.instance.OnTaskComplete += OnTaskComplete;
-    private void OnDisable() => ObjectiveTracking.instance.OnTaskComplete -= OnTaskComplete;
+    // private void OnEnable() => ObjectiveTracking.instance.OnTaskComplete += OnTaskComplete;
+    // private void OnDisable() => ObjectiveTracking.instance.OnTaskComplete -= OnTaskComplete;
 }

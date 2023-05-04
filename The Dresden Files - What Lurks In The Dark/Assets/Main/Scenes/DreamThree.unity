@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003127821, g: 0.0061466563, b: 0.014172211, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031405292, g: 0.0061706104, b: 0.014241753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4357,13 +4357,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: d5652458f3b957d4d98fe0f917f6a7d7, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Clean the cabinet
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Clean out the dining room cabinet.
   required: 1
+  voiceLineOnInteract: 18
+  notInteractedEffect: {fileID: 0}
 --- !u!1001 &145608517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16383,108 +16385,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 401548, guid: f0f79e951a6fd2547a1b21301ded163e, type: 3}
   m_PrefabInstance: {fileID: 608754136}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &610486494
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1024009782}
-    m_Modifications:
-    - target: {fileID: 5530016477370322074, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Name
-      value: Flashback Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
---- !u!224 &610486495 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5530016477370322078, guid: 9c072dec056c2c74a8d0a937a6e00741, type: 3}
-  m_PrefabInstance: {fileID: 610486494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &615129172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16726,13 +16626,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 8bdb7f2ec13e7264487dea71726bddba, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Take medicine
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Take medicine
   required: 0
+  voiceLineOnInteract: 14
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &620323679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24875,7 +24777,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5726014427273532146, guid: c33f5e4cd12f67d478c5c436cc624b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25527,7 +25429,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &953696631
 PrefabInstance:
@@ -27349,38 +27251,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 415016, guid: 4743926f06b7fdc4c93033724c776cdc, type: 3}
   m_PrefabInstance: {fileID: 1023463639}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1024009781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1024009782}
-  m_Layer: 0
-  m_Name: DoNotDelete
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1024009782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024009781}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 291, z: 254.83499}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 610486495}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1030454487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35035,13 +34905,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 79e2e39f7e0f4734989225e7d6c2e7f6, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Inspect Urn
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Find the Urn
   required: 0
+  voiceLineOnInteract: 8
+  notInteractedEffect: {fileID: 0}
 --- !u!1001 &1329684171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39260,7 +39132,7 @@ PrefabInstance:
     - target: {fileID: 553008357, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: flashbackCanvas
       value: 
-      objectReference: {fileID: 1024009781}
+      objectReference: {fileID: 0}
     - target: {fileID: 6058669650666072929, guid: 470725c8af0d6464e8e7e22cb5595556, type: 3}
       propertyPath: m_Name
       value: Player
@@ -43088,7 +42960,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1639414297
 PrefabInstance:
@@ -48662,7 +48534,7 @@ Transform:
   - {fileID: 918621583}
   - {fileID: 142668197}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1881587003
 PrefabInstance:
@@ -52980,13 +52852,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: d527d2b07c7764244aa2102dbe5754ce, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Look at love notes
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Find love notes
   required: 0
+  voiceLineOnInteract: 9
+  notInteractedEffect: {fileID: 0}
 --- !u!1001 &2004738495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54050,13 +53924,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f7e15ddf47fc44a8967b7562f28297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSound: {fileID: 8300000, guid: 23422305f67805d46992152b674ab3bd, type: 3}
+  interactionSound: {fileID: 0}
   promptMessage: Check Voicemail
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   taskSummary: Check Voicemail
   required: 1
+  voiceLineOnInteract: 3
+  notInteractedEffect: {fileID: 0}
 --- !u!64 &2056568911
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -55688,7 +55564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5515457420963645727, guid: 70a5e87b9ea5af34e918267b0c9f6df9, type: 3}
       propertyPath: m_LocalPosition.x

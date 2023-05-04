@@ -39,6 +39,8 @@ public class PlayerCore : MonoBehaviour
         
         SetDebug(debug);
         debugPresses = 0;
+        
+        // funni editor lighting
     }
     
     private void SetDebug(bool debug)

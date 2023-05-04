@@ -13,5 +13,51 @@ MonoBehaviour:
   m_Name: Voice Line List
   m_EditorClassIdentifier: 
   volume: 1
-  voiceLines: []
-  voiceLineScripts: []
+  voiceLines:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 159e4c8e6f54b9a4bbfbcbbb19fb572f, type: 3}
+  - {fileID: 8300000, guid: 6e426d2504b72464c886413f7c8c69d9, type: 3}
+  - {fileID: 8300000, guid: 23422305f67805d46992152b674ab3bd, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: d9fb39968e55e6b4199b959bf9d7fa0c, type: 3}
+  - {fileID: 8300000, guid: 79e2e39f7e0f4734989225e7d6c2e7f6, type: 3}
+  - {fileID: 8300000, guid: d527d2b07c7764244aa2102dbe5754ce, type: 3}
+  - {fileID: 8300000, guid: 61265514716b4df4688d405000118266, type: 3}
+  - {fileID: 8300000, guid: b8cac257cbfd18f4b8f9e9e53b9319f8, type: 3}
+  - {fileID: 8300000, guid: 0d567279ef2c0ee46af1a55bd88e652e, type: 3}
+  - {fileID: 8300000, guid: 80168c38230dc544da5a44fdbec91eb4, type: 3}
+  - {fileID: 8300000, guid: 8bdb7f2ec13e7264487dea71726bddba, type: 3}
+  - {fileID: 8300000, guid: 942be91c7e83d9e4887b6b59b18a4183, type: 3}
+  - {fileID: 8300000, guid: 46dff718dd8cc8c47bd8167609a82d79, type: 3}
+  - {fileID: 8300000, guid: f7838b8244200414388114cb66b3e291, type: 3}
+  - {fileID: 8300000, guid: d5652458f3b957d4d98fe0f917f6a7d7, type: 3}
+  - {fileID: 8300000, guid: 58add762452998b41b62b3a2995b53f1, type: 3}
+  - {fileID: 8300000, guid: 410a437b5cd9a0e4aadeb368965ed335, type: 3}
+  - {fileID: 8300000, guid: 1b3881247da545b4cb41592618a4a99d, type: 3}
+  - {fileID: 8300000, guid: 04159d0e51a26544d8e275aebc1b38e7, type: 3}
+  voiceLineScripts:
+  - you shouldn't see this lol
+  - dream one voicemail text
+  - dream two voicemail text
+  - dream three voicemail text
+  - tutorial flashback 1
+  - tutorial flashback 2
+  - tutorial flashback 3
+  - necklace voice line text here
+  - urn voice line text here
+  - love notes voice line text here
+  - business card voice line text here
+  - diagnosis sheet voice line text here
+  - portrait voice line text here
+  - pills voice lines in dream 2
+  - pills voice lines in dream 3
+  - fireplace voice line text here
+  - alarm voice line text here
+  - breakfast voice line text here
+  - dining room cabinet voice line text here
+  - dining room clock voice line text here
+  - laundry voice line text here
+  - the text for the failure ending
+  - the text for the success ending
