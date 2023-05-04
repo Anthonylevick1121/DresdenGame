@@ -29,29 +29,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = pause;
         // Time.timeScale = pause ? 0f : 1f;
         player.ToggleGameInput(!pause, true);
+        player.InputActions.Pause.Enable();
         VoicePlayer.instance.SetPaused(pause); // pause/resume audio
     }
-    
-    /*public void Resume()
-    {
-        pauseMenu.gameObject.SetActive(false);
-        // Time.timeScale = 1f;
-        isPaused = false;
-        // player.InputActions.Pause.Enable();
-        // Cursor.lockState = CursorLockMode.Locked;
-        // Cursor.visible = false;
-        
-    }
-    
-    // Turn on player mouse
-    // Turn off player movement
-    public void Pause()
-    {
-        pauseMenu.gameObject.SetActive(true);
-        // Time.timeScale = 0f;
-        isPaused = true;
-        player.InputActions.Pause.Disable();
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }*/
 }

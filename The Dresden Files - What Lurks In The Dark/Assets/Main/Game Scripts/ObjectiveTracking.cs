@@ -38,7 +38,7 @@ public class ObjectiveTracking : MonoBehaviour
 
     //private int levelIdx; // what objective set should we be using? // ignore, we're dyn alloc'ing our tasks
     private int requiredTasksDone; // how many have we completed?
-    private int optionalTasksDone; // how many have we completed?
+    [SerializeField] private int optionalTasksDone; // how many have we completed?
     
     private readonly List<(bool, string)> requiredTasks = new ();
     private readonly List<bool> optionalTasks = new ();
@@ -48,8 +48,8 @@ public class ObjectiveTracking : MonoBehaviour
     //private static readonly Objective finalObjective = new Objective { required = true, name = "Go to sleep."};
     private static readonly string finalTask = "Go to sleep.";
     
-    private bool missedOptional = false;
-    private bool lastScene = false;
+    [SerializeField] private bool missedOptional = false;
+    [SerializeField] private bool lastScene = false;
     public bool CheckWin() => lastScene && !missedOptional && optionalTasksDone == optionalTasks.Count;
     
     private void Update()
@@ -87,14 +87,14 @@ public class ObjectiveTracking : MonoBehaviour
         if(newScene.name == "Tutorial")
             missedOptional = false;
         
-        lastScene = newScene.name == "DreamThree";
-        
         InitializeLevel();
     }
     
     private void InitializeLevel()
     {
         if (initialized) return;
+        
+        lastScene = SceneManager.GetActiveScene().name == "DreamThree";
         
         player = FindAnyObjectByType<PlayerCore>();
         initialized = player ? true : false;

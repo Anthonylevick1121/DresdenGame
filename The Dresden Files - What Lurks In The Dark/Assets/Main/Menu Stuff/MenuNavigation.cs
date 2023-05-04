@@ -13,6 +13,11 @@ public class MenuNavigation : MonoBehaviour
         Application.Quit();
     }
     
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    
     public void GoToCredits()
     {
         SceneManager.LoadScene("Credits");

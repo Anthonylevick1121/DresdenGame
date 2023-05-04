@@ -8,6 +8,8 @@ public class DoorFinalTask : Interactable
     
     protected override bool Interact(PlayerCore player, HoldableItem heldItem)
     {
+        print("attempt door task: winnable = "+ObjectiveTracking.instance.CheckWin());
+        
         if (!ObjectiveTracking.instance.CheckWin())
             return false;
         ObjectiveTracking.instance.AdvanceLevel();
