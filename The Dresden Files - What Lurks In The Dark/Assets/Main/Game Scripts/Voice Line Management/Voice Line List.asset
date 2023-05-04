@@ -18,9 +18,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 159e4c8e6f54b9a4bbfbcbbb19fb572f, type: 3}
   - {fileID: 8300000, guid: 6e426d2504b72464c886413f7c8c69d9, type: 3}
   - {fileID: 8300000, guid: 23422305f67805d46992152b674ab3bd, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 215bba2e519f4ff4eac18e06ab32e690, type: 3}
+  - {fileID: 8300000, guid: 9b5f64c6d80581a41abe07ea5bdd77db, type: 3}
+  - {fileID: 8300000, guid: 9cb06f2b7c6e59f41b2ffa00aff58053, type: 3}
   - {fileID: 8300000, guid: d9fb39968e55e6b4199b959bf9d7fa0c, type: 3}
   - {fileID: 8300000, guid: 79e2e39f7e0f4734989225e7d6c2e7f6, type: 3}
   - {fileID: 8300000, guid: d527d2b07c7764244aa2102dbe5754ce, type: 3}
@@ -39,25 +39,52 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 04159d0e51a26544d8e275aebc1b38e7, type: 3}
   voiceLineScripts:
   - you shouldn't see this lol
-  - dream one voicemail text
-  - dream two voicemail text
-  - dream three voicemail text
-  - tutorial flashback 1
-  - tutorial flashback 2
-  - tutorial flashback 3
-  - necklace voice line text here
-  - urn voice line text here
-  - love notes voice line text here
-  - business card voice line text here
-  - diagnosis sheet voice line text here
-  - portrait voice line text here
-  - pills voice lines in dream 2
-  - pills voice lines in dream 3
-  - fireplace voice line text here
-  - alarm voice line text here
-  - breakfast voice line text here
-  - dining room cabinet voice line text here
-  - dining room clock voice line text here
-  - laundry voice line text here
-  - the text for the failure ending
-  - the text for the success ending
+  - "Hello Michael, it\u2019s me calling to talk to you about your prescription.
+    Make sure to take one every night before bed. And if you have any other questions,
+    make sure to call and let me know. Please be discrete about this. Remember it
+    gets worse before it gets better."
+  - "Hello Michael, it\u2019s me calling to talk to you about your prescription.
+    Make sure to take one every night before bed. And if you have any other questions,
+    make sure to call me and let me know. Please be discrete about this, and remember
+    it gets worse before it gets better."
+  - "\u201CHello? Hello? Finally I got through to you! I don\u2019t have much time
+    to explain. You need to find some way to wake up and leave the dream, don\u2019t
+    trust him - he\u2019s lying to you.\u201D Who was that? Leave the\u2026 dream?
+    Have all these events just been dreams? If this is a dream, then even that call
+    was part of it. I\u2019m not sure if it\u2019s just bad side effects or something
+    else. "
+  - She looks so happy here. I wish she was still here.
+  - I remember when this paper arrived at my doorstep. Right there on the front page.
+    She was well loved in the community.
+  - A man came up to me a couple weeks after the funeral offering help. I took him
+    up on his offer.
+  - This was her necklace, I remember when we got this.
+  - "It\u2019s just a nightmare. It has to be! It can\u2019t be real. It just can\u2019t."
+  - "I couldn\u2019t bring myself to get rid of these just yet\u2026 but I also can\u2019t
+    bring myself to read them."
+  - "\u201CHere\u2019s my card. Take some time to\u2026 think it over.\u201D He scribbled
+    his information down for me here saying it was his \u201Ccard\u201D. I wonder
+    how much of a professional he truly is. "
+  - "Doctors said they found nothing wrong with me, yet this man said he could help
+    me. I\u2019m not sure who to believe."
+  - "I miss her. There\u2019s not a day that goes by where I don\u2019t think of
+    you."
+  - "Well, no ill effects so far, although I\u2019m not too sure how long it will
+    take for these to kick in."
+  - "This isn\u2019t working at all. My dreams just keep getting weirder."
+  - This should hopefully help with the weird electricity issues this place seemingly
+    has.
+  - "I haven\u2019t set foot in this room since\u2026 nevermind. I don\u2019t know
+    how or why this alarm was set."
+  - I remember making breakfast with her in the mornings before leaving to go to
+    work. For now, eating this will suffice.
+  - I put many of the gifts she gave me in here. What do I do with them now? All
+    they do is remind me of her.
+  - "This clock was telling the right time yesterday. It\u2019s off by 3 hours now.
+    What happened to it?"
+  - Doing laundry is not my favorite thing to do in the morning, but it has to be
+    done I suppose.
+  - "These nightmares\u2026 they\u2019re beginning to haunt me more and more. They
+    feel so real. Maybe I\u2019ll call and ask if this is all just a side effect."
+  - "I don\u2019t know who was on the phone, but I feel like I have to trust them.
+    I need to run\u2026 fast."

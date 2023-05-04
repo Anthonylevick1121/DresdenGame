@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -11378,6 +11378,7 @@ Transform:
   - {fileID: 1832076338}
   - {fileID: 1835637309}
   - {fileID: 645278527}
+  - {fileID: 2007539792}
   - {fileID: 2104694670}
   - {fileID: 508805418}
   - {fileID: 119118270}
@@ -11407,7 +11408,6 @@ Transform:
   - {fileID: 295651646}
   - {fileID: 1156349761}
   - {fileID: 121696936}
-  - {fileID: 2007539792}
   - {fileID: 1670661121}
   - {fileID: 2078656617}
   - {fileID: 658283134}
@@ -51956,7 +51956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354451641}
-  m_RootOrder: 448
+  m_RootOrder: 419
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2007539793
 MeshRenderer:
